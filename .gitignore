@@ -1,0 +1,6 @@
+.env
+key.env
+*.env
+*.secret
+.env
+key.env

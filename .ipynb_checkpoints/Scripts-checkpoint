@@ -1,0 +1,99 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "77583e97-3b8c-4181-bf27-2ffa80739d45",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "📚 Chargement des documents PDF…\n",
+      "✅ 26 pages chargées.\n",
+      "✂️ 161 chunks créés.\n",
+      "🔢 Génération de l'index FAISS…\n",
+      "✅ Index sauvegardé dans : ../embeddings/faiss_index\n"
+     ]
+    }
+   ],
+   "source": [
+    "# ==========================================================\n",
+    "# rag_indexer.py — Compatible LangChain 1.x\n",
+    "# ==========================================================\n",
+    "import os\n",
+    "from langchain_huggingface import HuggingFaceEmbeddings\n",
+    "from langchain_community.document_loaders import PyPDFLoader\n",
+    "from langchain_text_splitters import RecursiveCharacterTextSplitter\n",
+    "from langchain_community.vectorstores import FAISS\n",
+    "\n",
+    "# Dossiers\n",
+    "PDF_DIR =  \"/home/sacko/Documents/Projet_Rag_RH/Donnees\"\n",
+    "INDEX_DIR = \"../embeddings/faiss_index\"\n",
+    "os.makedirs(INDEX_DIR, exist_ok=True)\n",
+    "\n",
+    "# Modèle d'embedding\n",
+    "MODEL = \"sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2\"\n",
+    "\n",
+    "print(\"📚 Chargement des documents PDF…\")\n",
+    "docs = []\n",
+    "for file in os.listdir(PDF_DIR):\n",
+    "    if file.endswith(\".pdf\"):\n",
+    "        loader = PyPDFLoader(os.path.join(PDF_DIR, file))\n",
+    "        docs.extend(loader.load())\n",
+    "\n",
+    "print(f\"✅ {len(docs)} pages chargées.\")\n",
+    "\n",
+    "# Découpage en chunks\n",
+    "splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)\n",
+    "texts = splitter.split_documents(docs)\n",
+    "print(f\"✂️ {len(texts)} chunks créés.\")\n",
+    "\n",
+    "# Embeddings + Index\n",
+    "embeddings = HuggingFaceEmbeddings(model_name=MODEL)\n",
+    "print(\"🔢 Génération de l'index FAISS…\")\n",
+    "db = FAISS.from_documents(texts, embeddings)\n",
+    "db.save_local(INDEX_DIR)\n",
+    "print(f\"✅ Index sauvegardé dans : {INDEX_DIR}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0e8936a7-b9de-4113-b7e3-9b3b4850c3b3",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bb2a56db-c8e4-47f5-a2ec-f16778a69568",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python (Projet_rag_rh)",
+   "language": "python",
+   "name": "projet_rag_rh"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.14"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
