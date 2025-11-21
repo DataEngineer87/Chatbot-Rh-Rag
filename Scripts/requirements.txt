@@ -1,0 +1,11 @@
+streamlit
+python-dotenv
+langchain==1.0.5
+langchain-community
+langchain-core
+langchain-openai
+langchain-huggingface
+faiss-cpu
+sentence-transformers
+pypdf
+
