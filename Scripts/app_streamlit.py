@@ -71,7 +71,7 @@ def generer_reponse(question, db, llm):
 # Interface Streamlit 
 def main():
     st.set_page_config(page_title="Chatbot RH RAG")
-    st.title("Chatbot RH avec RAG (OpenAI + FAISS)")
+    # st.title("Chatbot RH avec RAG (OpenAI + FAISS)")
     st.write("Pose une question sur la politique RH (télétravail, congés, formation, etc.).")
 
 # Récupération de clé OpenAI depuis les secrets ou un .env
