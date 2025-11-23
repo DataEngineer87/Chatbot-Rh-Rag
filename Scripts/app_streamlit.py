@@ -59,7 +59,7 @@ def generer_reponse(question, db, llm):
     # Appel au LLM OpenAI
     reponse = llm.invoke(prompt)
 
-    # Extraire les sources simples
+    # Extrairaction des sources 
     sources = []
     for doc in resultats:
         source = doc.metadata.get("source", "inconnu")
