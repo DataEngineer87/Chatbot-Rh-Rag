@@ -72,7 +72,7 @@ def generer_reponse(question, db, llm):
 def main():
     st.set_page_config(page_title="Chatbot RH RAG")
     st.title("Chatbot RH avec RAG")
-    st.write("Accédez ici à toutes les informations clés de la politique RH (télétravail, congés, formation, avantages.)s")
+    st.write("Accédez ici à toutes les informations clés de la politique RH (télétravail, congés, formation, avantages.)")
 
 # Récupération de clé OpenAI depuis les secrets ou un .env
     cle_openai = recuperer_cle_openai()
