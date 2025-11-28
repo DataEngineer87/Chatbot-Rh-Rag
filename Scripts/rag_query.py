@@ -49,20 +49,21 @@ def question_concerne_rh(question):
 def repondre(question):
     """Pipeline complet : vérification + RAG + LLM."""
 
-    # 1) Vérifier domaine RH
+    # Vérifier domaine RH
     if not question_concerne_rh(question):
         return "Je ne peux répondre qu’aux questions liées aux documents internes RH."
 
-    # 2) Load retriever
+    # Load retriever
     retriever = charger_retriever()
 
-    # 3) Récupérer documents de contexte
-    docs = retriever.get_relevant_documents(question)
+    # Récupérer documents de contexte
+    #docs = retriever.get_relevant_documents(question)
+    docs = retriever.invoke("Ma question")
 
     if len(docs) == 0:
         return "Je ne peux répondre qu’aux questions liées aux documents internes RH."
 
-    # 4) Vérifier score (si disponible)
+    # Vérifier score (si disponible)
     try:
         scores = [d.metadata.get("score", 0.0) for d in docs]
         if min(scores) > THRESHOLD:
@@ -70,7 +71,7 @@ def repondre(question):
     except:
         pass
 
-    # 5) Construire le prompt
+    # Construire le prompt
     context = "\n\n".join([d.page_content for d in docs])
 
     template = PromptTemplate(
@@ -84,14 +85,13 @@ def repondre(question):
         question=question
     )
 
-    # 6) LLM OpenAI
+    # LLM OpenAI
     llm = ChatOpenAI(model="gpt-4o-mini")
     answer = llm.invoke(prompt)
 
     return answer.content
 
 
-# In[ ]:
 
 
 
