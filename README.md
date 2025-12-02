@@ -2,7 +2,7 @@
 ## Chatbot RH RAG – OpenAI + FAISS + Streamlit
 Développement d’un assistant RH intelligent exploitant les documents internes (PDF) pour répondre automatiquement aux questions des collaborateurs concernant le télétravail, les congés, la formation et autres politiques internes.
 
-Le projet combine :
+**Le projet combine :**
 - Recherche sémantique (FAISS + embeddings)
 - IA générative (GPT-4o mini)
 - Interface web (Streamlit)
@@ -15,7 +15,7 @@ Dans beaucoup d’entreprises, les informations RH sont enfouies dans des PDF ou
 Ce projet montre comment un data scientist / ML engineer peut :
 - Transformer ces documents en base de connaissance interrogeable en langage naturel
 - Construire un POC fonctionnel et déployé
-- Maîtriser la chaîne complète : data → modèle → app → déploiement
+- Maîtriser la chaîne complète : data -> modèle -> app -> déploiement
 ---
 
 ## Architecture
