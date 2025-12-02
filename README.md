@@ -139,13 +139,13 @@ https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
 
 - ingestion → indexation ->  recherche -> génération
 
-Industrialisation légère : 
+## Industrialisation légère : 
 
-CI GitHub Actions
+- CI GitHub Actions
 
-déploiement cloud
+- déploiement cloud
 
-Communication technique (README, interface claire)
+- Communication technique (README, interface claire)
 ```
   
 
