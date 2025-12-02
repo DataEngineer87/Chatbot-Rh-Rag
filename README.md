@@ -81,7 +81,7 @@ pip install -r requirements.txt
 
 ```
 ## Ajout des fichiers PDF RH
-On Place tous les PDFs dans le dossier donnees/ (ex. charte_teletravail.pdf, conges_et_absences.pdf, etc.)
+On Place tous les PDFs dans le dossier 'donnees/' (ex. charte_teletravail.pdf, conges_et_absences.pdf, etc.)
 
 ## Création d'un fichier .env
 On se connecte à OpenAi et on génère une clé
