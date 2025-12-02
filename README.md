@@ -1,26 +1,13 @@
 # 💼 Assistant intelligent pour consulter les politiques RH internes (PDF → RAG → GPT/OpenAI)
 Déployé sur Streamlit Cloud, avec pipeline CI/CD GitHub Actions, et un moteur RAG utilisant OpenAI + FAISS + Streamlit.
 
+## Technologies utilisées
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-
-## 🚀 Technologies utilisées
-
 ![OpenAI](https://img.shields.io/badge/LLM-OpenAI-412991?logo=openai&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/Embeddings-HuggingFace-F9A03C?logo=huggingface&logoColor=white)
 ![LangChain](https://img.shields.io/badge/Framework-LangChain-1C3C3C)
-
-![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-
-![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
-
 ![License](https://img.shields.io/badge/License-MIT-green)
-
-
-
-
-
 
 ### Démonstration interactive
 [Application hébergée sur Streamlit Cloud](https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/)
