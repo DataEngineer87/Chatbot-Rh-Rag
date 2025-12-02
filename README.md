@@ -1,5 +1,4 @@
 # 💼 Assistant intelligent pour consulter les politiques RH internes (PDF → RAG → GPT/OpenAI)
-Déployé sur Streamlit Cloud, avec pipeline CI/CD GitHub Actions, et un moteur RAG utilisant OpenAI + FAISS + Streamlit.
 
 ## Technologies utilisées
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
