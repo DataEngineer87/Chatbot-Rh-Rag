@@ -1,6 +1,15 @@
-# 💼 Assistant RH Intelligent avec IA
-## Chatbot RH RAG – OpenAI + FAISS + Streamlit
-Développement d’un assistant RH intelligent exploitant les documents internes (PDF) pour répondre automatiquement aux questions des collaborateurs concernant le télétravail, les congés, la formation et autres politiques internes.
+# 💼 Assistant intelligent pour consulter les politiques RH internes (PDF → RAG → GPT/OpenAI)
+Déployé sur Streamlit Cloud, avec pipeline CI/CD GitHub Actions, et un moteur RAG utilisant OpenAI + FAISS + Streamlit.
+
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+
+### Démonstration interactive
+[Application hébergée sur Streamlit Cloud](https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/)
+
+# Objectif :
+Ce projet vise à créer un assistant RH intelligent capable de répondre aux questions des employés concernant :
+le télétravail, les Congés & Absences, la formation et autres politiques internes.
 
 **Le projet combine :**
 - Recherche sémantique (FAISS + embeddings)
