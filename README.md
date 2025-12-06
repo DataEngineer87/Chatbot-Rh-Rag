@@ -146,7 +146,7 @@ https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
 - déploiement cloud
 
 - Communication technique (README, interface claire)
-```
+  
   
 
 
