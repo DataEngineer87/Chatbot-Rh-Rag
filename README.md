@@ -147,7 +147,8 @@ https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
 
 - Communication technique (README, interface claire)
   
-  
+## Auteur
+**Alseny — Data Scientist confirmé orienté MLOps & GenAI**
 
 
 
