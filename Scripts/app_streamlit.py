@@ -1,10 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
-
+# =====================================================
 # app_streamlit.py
+# =====================================================
 import os
 from dotenv import load_dotenv
 import streamlit as st
@@ -35,9 +31,9 @@ def recuperer_cle_openai():
     return None
 
 
-# ---------------------------
+# ====================================================
 # Interface Streamlit
-# ---------------------------
+# =======================================================
 
 def main():
     st.set_page_config(page_title="Chatbot RH RAG")
@@ -48,11 +44,11 @@ def main():
     cle_openai = recuperer_cle_openai()
 
     if not cle_openai:
-        st.error("❌ Clé OpenAI manquante.\n\nAjoute `OPENAI_API_KEY` dans :\n- `.env` en local\n- `Secrets` sur Streamlit Cloud.")
+        st.error("Clé OpenAI manquante.\n\nAjoute `OPENAI_API_KEY` dans :\n- `.env` en local\n- `Secrets` sur Streamlit Cloud.")
         return
 
     # Saisie utilisateur
-    question = st.text_input("🧑‍💼 Votre question :")
+    question = st.text_input("🧑‍💼 Votre question, svp :")
     bouton = st.button("Envoyer")
 
     if bouton and question.strip() != "":
@@ -69,10 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# In[ ]:
-
-
-
-
