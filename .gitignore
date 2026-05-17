@@ -4,3 +4,5 @@ key.env
 *.secret
 .env
 key.env
+__pycache__/
+*.pyc
