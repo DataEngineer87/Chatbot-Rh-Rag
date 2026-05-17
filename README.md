@@ -1,4 +1,4 @@
-# 💼 Assistant intelligent pour consulter les politiques RH internes (PDF → RAG → GPT/OpenAI)
+# 🤖 Assistant RH intelligent (RAG + LLM)
 ## Démo
 
 ![Démo](images/DemoStreamlit.gif)
