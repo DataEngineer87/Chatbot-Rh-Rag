@@ -1,4 +1,4 @@
-# 🤖 Chatbot RH Intelligent — RAG + OpenAI + FAISS
+## 🤖 Chatbot RH Intelligent — RAG + OpenAI + FAISS
 💼 Assistant conversationnel permettant de consulter automatiquement les politiques RH internes (PDF) via un système de Retrieval-Augmented Generation (RAG).
 
 - Réponses contextualisées basées sur les documents internes
@@ -7,10 +7,10 @@
 - Déploiement cloud avec Streamlit Cloud
 - Mémoire conversationnelle + citations des sources  
 ---
-## Démonstration interactive
+### Démonstration interactive
 ![Démo Streamlit](images/DemoStreamlit.gif)
 
-## 🚀 Application déployée sur Streamlit Cloud : 
+### 🚀 Application déployée sur Streamlit Cloud : 
 [Ouvrir l’application](https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/)
 
 💬 Exemples de questions :
