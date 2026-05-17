@@ -10,6 +10,16 @@
 
 ![Démo](images/DemoStreamlit.gif)
 
+🔗 Application en ligne : https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
+💬 Exemples de questions :
+- "Combien de jours de télétravail sont autorisés ?"
+- "Quelle est la politique de congés ?"
+- "Comment fonctionne la formation interne ?"
+
+---
+
+
+
 ## Technologies utilisées
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/LLM-OpenAI-412991?logo=openai&logoColor=white)
