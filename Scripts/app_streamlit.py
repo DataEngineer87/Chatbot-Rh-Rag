@@ -255,10 +255,8 @@ def main():
         with st.chat_message("assistant", avatar="🤖"):
 
                 with st.spinner("Consultation des documents RH..."):
-                    resultat = repondre(
-                        question,
-                        historique=st.session_state.messages
-                    )   
+
+                    resultat = repondre(question)
                     reponse = resultat.get("reponse", "")
                     sources = resultat.get("sources", "")
                     score = resultat.get("score_confiance", 0)
