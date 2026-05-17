@@ -11,6 +11,7 @@
 ![Démo](images/DemoStreamlit.gif)
 
 🔗 Application en ligne : https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
+
 💬 Exemples de questions :
 - "Combien de jours de télétravail sont autorisés ?"
 - "Quelle est la politique de congés ?"
