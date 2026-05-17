@@ -1,7 +1,7 @@
 # 🤖 Assistant RH intelligent (RAG + LLM)
 ## 💼 Assistant conversationnel permettant de consulter automatiquement les politiques RH internes (PDF) via un système de Retrieval-Augmented Generation (RAG).
 
-⚡ Temps de réponse < 2s  
+⚡ Temps de réponse < 30s  
 🎯 Réponses fiables basées sur des documents internes  
 🚀 Application déployée (Streamlit Cloud)
 
