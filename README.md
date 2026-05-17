@@ -1,7 +1,7 @@
 # 💼 Assistant intelligent pour consulter les politiques RH internes (PDF → RAG → GPT/OpenAI)
 ## Démo
 
-![Démo](DemoStreamlit.gif)
+![Démo](images/DemoStreamlit.gif)
 
 ## Technologies utilisées
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
