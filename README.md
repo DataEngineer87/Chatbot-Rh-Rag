@@ -6,11 +6,12 @@
 🚀 Application déployée (Streamlit Cloud)
 
 ---
-## Démo
+## Démonstration interactive
 
-![Démo](images/DemoStreamlit.gif)
+![Démo Streamlit](images/DemoStreamlit.gif)
 
-🔗 Application en ligne : https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
+## 🚀 Application déployée sur Streamlit Cloud : 
+[Ouvrir l’application](https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/)
 
 💬 Exemples de questions :
 - "Combien de jours de télétravail sont autorisés ?"
