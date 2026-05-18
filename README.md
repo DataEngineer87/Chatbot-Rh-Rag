@@ -2,6 +2,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/LLM-OpenAI-412991?logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/Framework-LangChain-1C3C3C)
+![ChatGPT](https://img.shields.io/badge/Powered%20by-ChatGPT-10A37F)
 ![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
