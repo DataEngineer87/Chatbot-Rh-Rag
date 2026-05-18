@@ -118,172 +118,57 @@ conda activate Projet_rag_rh
 
 pip install -r requirements.txt
 
-
 ---
 ## Configuration de clé OpenAI
 Créer un fichier sur votre machine .env :
 
-OPENAI_API_KEY=your_key_here
+OPENAI_API_KEY=votre_clé_ici
 
 ---
-
-## Technologies utilisées
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
-![OpenAI](https://img.shields.io/badge/LLM-OpenAI-412991?logo=openai&logoColor=white)
-![LangChain](https://img.shields.io/badge/Framework-LangChain-1C3C3C)
-![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
-
-### Démonstration interactive
-[Application hébergée sur Streamlit Cloud](https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/)
-
-# Objectif :
-Ce projet vise à créer un assistant RH intelligent capable de répondre aux questions des employés concernant :
-le télétravail, les Congés & Absences, la formation et autres politiques internes.
-
-**Le projet combine :**
-- Recherche sémantique (FAISS + embeddings)
-- IA générative (GPT-4o mini)
-- Interface web (Streamlit)
-- Architecture propre et déployable (GitHub Actions + Streamlit Cloud)
-
----
-## Objectif
-Dans beaucoup d’entreprises, les informations RH sont enfouies dans des PDF ou intranets difficiles à naviguer.
-
-Ce projet montre comment un data scientist / ML engineer peut :
-- Transformer ces documents en base de connaissance interrogeable en langage naturel
-- Construire un POC fonctionnel et déployé
-- Maîtriser la chaîne complète : data -> modèle -> app -> déploiement
----
-
-## Architecture
-
-1. **Indexation**
-   - Les PDF RH sont placés dans `Donnees/`
-   - `index.py` :
-     - extraction du texte (PyPDFLoader)
-     - découpage en chunks (LangChain)
-     - création des embeddings (HuggingFace MiniLM)
-     - construction d'index FAISS et le sauvegarde dans `embeddings/faiss_index`
-
-2. **Application Streamlit**
-   - `app_streamlit.py` :
-     - chargement de l’index FAISS
-     - lecture de clé OpenAI (secrets/.env)
-     - envoie la question de l’utilisateur
-     - fait une recherche dans l’index
-     - construit un prompt et appelle gpt-4o-mini
-     - affiche la réponse
-
-3. **Déploiement**
-   - CI GitHub Actions (`.github/workflows/ci.yml`)
-   - Hébergement Streamlit Cloud :
-     - lien public de démonstration
-     - clé OpenAI dans les secrets Streamlit
-
----
-
-## Stack technique
-- **NLP / RAG**
-  - LangChain 1.x
-  - FAISS
-  - Sentence-Transformers (MiniLM)
-  - OpenAI gpt-4o-mini
-
-- **Backend / App**
-  - Python 3.11
-  - Streamlit
-
-- **MLOps / DevOps**
-  - GitHub Actions (CI)
-  - Streamlit Cloud (déploiement)
-  - Gestion des secrets (Streamlit + .env)
-
----
-
-## Installation locale
-
-### Clonage du repo
-
-```bash
-git clone https://github.com/DataEngineer87/chatbot-rh-rag-openai.git
-cd chatbot-rh-rag-openai
-
-```
-## Créer un environnement et installer les dépendances sous Lunix
-
-```bash
-conda create -n Projet_rag_rh python=3.11 -y
-conda activate Projet_rag_rh
-pip install -r requirements.txt
-
-```
-## Ajout des fichiers PDF RH
-On Place tous les PDFs dans le dossier `Donnees/` (ex. charte_teletravail.pdf, conges_et_absences.pdf, etc.)
-
-## Création d'un fichier .env
-On se connecte à OpenAi et on génère une clé
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxx
-
-## Génération de l’index FAISS
-```
+## Génération d’index
 python index.py
 
-```
-
-## Lancement de l’app Streamlit
-
-```
+## Lancement d’application
 streamlit run app_streamlit.py
 
-```
+## Déploiement
 
-## Déploiement Streamlit Cloud
-- On Pousse le projet sur GitHub
-- On Crée une app sur Streamlit Cloud en pointant vers app_streamlit.py
-- Dans Secrets colle la clé
-  
-```
-OPENAI_API_KEY = "sk-xxxxxxxxxxxxxxxx"
+- Push du projet sur GitHub
+- Déploiement via Streamlit Cloud
+- Ajout de la clé OpenAI dans les secrets streamlit
 
-```
-- Une fois déployé, on obtient un lien du type :
-  
-```
-https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/
+## Industrialisation
 
-```
+- CI/CD avec GitHub Actions
+- Déploiement cloud (Streamlit)
+- Architecture modulaire
+- Extension possible vers API (FastAPI) et Docker
+
+## Limites & améliorations
+
+- Amélioration du ranking des documents
+- Ajout de mémoire conversationnelle
+- Intégration avec Slack / Teams
+- Passage à une base vectorielle scalable (Pinecone, Weaviate)
+
+## Ce qui rend ce projet pertinent
+- Cas d’usage métier réel (RH)
+- Pipeline RAG complet de bout en bout
+- Déploiement accessible et fonctionnel
+- Approche orientée produit et impact
 
 ## Compétences démontrées
 
-- IA générative & RAG sur documents internes
-
-- NLP appliqué à un cas métier (RH)
-
+- IA générative & RAG appliqué à un cas concret
+- NLP et recherche sémantique
 - Construction d’un pipeline complet :
+- data → embeddings → recherche → génération → application
+- Déploiement cloud & CI/CD
+- Approche orientée produit
 
-- ingestion → indexation ->  recherche -> génération
-
-## Industrialisation légère : 
-
-- CI GitHub Actions
-
-- déploiement cloud
-
-- Communication technique (README, interface claire)
-  
 ## Auteur
-**Alseny — Data Scientist confirmé orienté MLOps & GenAI**
-
-
-
-
-
-
-
-
+### Alseny
+Data Scientist | MLOps | GenAI
 
 
 
