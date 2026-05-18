@@ -118,9 +118,9 @@ conda activate Projet_rag_rh
 
 pip install -r requirements.txt
 
-## Configuration de clé OpenAI
 
 ---
+## Configuration de clé OpenAI
 Créer un fichier sur votre machine .env :
 
 OPENAI_API_KEY=your_key_here
