@@ -32,7 +32,7 @@
 ### Objectif métier
 
 Dans de nombreuses entreprises, les informations RH sont :
-- dispersées dans des PDF
+- éparpiller dans des PDF
 - difficiles à rechercher
 - peu accessibles aux employés
 
