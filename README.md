@@ -6,7 +6,7 @@
 ![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## 🤖 Chatbot RH Intelligent — RAG + OpenAI + FAISS
+# 🤖 Chatbot RH Intelligent — RAG + OpenAI + FAISS
 💼 Assistant conversationnel permettant de consulter automatiquement les politiques RH internes (PDF) via un système de Retrieval-Augmented Generation (RAG).
 
 - Réponses contextualisées basées sur les documents internes
@@ -15,10 +15,10 @@
 - Déploiement cloud avec Streamlit Cloud
 - Mémoire conversationnelle + citations des sources  
 ---
-### Démonstration interactive
+## Démonstration interactive
 ![Démo Streamlit](images/DemoStreamlit.gif)
 
-### 🚀 Application déployée sur Streamlit Cloud : 
+## 🚀 Application déployée sur Streamlit Cloud : 
 [Tester l’application ici](https://chatbot-rh-rag-scmr8r8njizt9pvbp6268f.streamlit.app/)
 
 💬 Exemples de questions :
@@ -27,9 +27,10 @@
 - "L’employeur peut-il imposer le télétravail en cas de crise sanitaire ou de confinement ?"
 - "Combien de jours de RTT un salarié à temps complet peut-il obtenir par an et quelles sont les conditions de prise ?"
 - "Quels frais liés au télétravail peuvent être pris en charge par l’entreprise ?"
+- Etc,etc.
 
 ---
-### Objectif métier
+## Objectif métier
 
 Dans de nombreuses entreprises, les informations RH sont :
 - éparpiller dans des PDF
@@ -42,7 +43,7 @@ Dans de nombreuses entreprises, les informations RH sont :
 - améliorer l’accès à l’information interne
 
 ---
-### Impact business
+## Impact business
 
 **Ce système permet :**
 
@@ -55,7 +56,7 @@ Dans de nombreuses entreprises, les informations RH sont :
 
 ---
 
-### Architecture
+## Architecture
 
 Pipeline complet de type RAG :
 
@@ -91,24 +92,24 @@ Pipeline complet de type RAG :
 
 ---
 
-### Stack technique
+## Stack technique
 
-#### NLP / RAG
+### NLP / RAG
 - LangChain
 - FAISS
 - Sentence-Transformers (MiniLM)
 - OpenAI (gpt-4o-mini)
 
-#### Backend / App
+### Backend / App
 - Python 3.11
 - Streamlit
 
-#### MLOps / DevOps
+### MLOps / DevOps
 - GitHub Actions (CI)
 - Streamlit Cloud (déploiement)
 - Gestion des secrets (.env + Streamlit)
 
-### Installation locale
+## Installation locale
 
 git clone https://github.com/DataEngineer87/chatbot-rh-rag-openai.git
 cd chatbot-rh-rag-openai
