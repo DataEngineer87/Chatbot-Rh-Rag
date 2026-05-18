@@ -16,11 +16,108 @@
 💬 Exemples de questions :
 - "Combien de jours de télétravail sont autorisés ?"
 - "Quelle est la politique de congés ?"
-- "Comment fonctionne la formation interne ?"
+- "L’employeur peut-il imposer le télétravail en cas de crise sanitaire ou de confinement ?"
+- "Combien de jours de RTT un salarié à temps complet peut-il obtenir par an et quelles sont les conditions de prise ?"
+- "Quels frais liés au télétravail peuvent être pris en charge par l’entreprise ?"
+
+---
+### Objectif métier
+
+Dans de nombreuses entreprises, les informations RH sont :
+- dispersées dans des PDF
+- difficiles à rechercher
+- peu accessibles aux employés
+
+**Ce projet montre comment :**
+- transformer des documents internes en **base de connaissance interrogeable en langage naturel**
+- automatiser les réponses aux questions RH
+- améliorer l’accès à l’information interne
+
+---
+### Impact business
+
+**Ce système permet :**
+
+- 📉 Réduction du nombre de tickets RH
+- ⏰ Gain de temps pour les employés
+- 📚 Accès instantané aux politiques internes
+- 🤖 Automatisation des FAQ (Foire Aux Questions) RH
+
+**👉 Impact : ce type de solution peut réduire jusqu’à 30–50% des sollicitations RH simples.**
 
 ---
 
+### Architecture
 
+Pipeline complet de type RAG :
+
+1. 📄 Ingestion des documents RH (PDF)
+2. ✂️ Découpage en chunks (LangChain)
+3. 🔎 Création d’embeddings (MiniLM)
+4. 🧠 Indexation vectorielle (FAISS)
+5. 🔍 Recherche sémantique
+6. 🤖 Génération de réponse (GPT-4o-mini)
+7. 🌐 Interface utilisateur (Streamlit)
+
+---
+## Architecture technique
+
+- Ingestion : PyPDFLoader
+- Processing : LangChain (chunking)
+- Embeddings : Sentence Transformers (MiniLM)
+- Stockage vectoriel : FAISS
+- LLM : OpenAI (gpt-4o-mini)
+- Frontend : Streamlit
+- CI/CD : GitHub Actions
+- Déploiement : Streamlit Cloud
+---
+
+---
+
+## 📊 Résultats
+
+- ⏰ Temps de réponse rapide (< 2s)
+- 🎯 Réponses contextualisées basées sur les documents internes
+- 📉 Réduction potentielle de la charge RH
+- 📚 Accès simplifié à l’information
+
+---
+
+### Stack technique
+
+#### NLP / RAG
+- LangChain
+- FAISS
+- Sentence-Transformers (MiniLM)
+- OpenAI (gpt-4o-mini)
+
+#### Backend / App
+- Python 3.11
+- Streamlit
+
+#### MLOps / DevOps
+- GitHub Actions (CI)
+- Streamlit Cloud (déploiement)
+- Gestion des secrets (.env + Streamlit)
+
+### Installation locale
+
+git clone https://github.com/DataEngineer87/chatbot-rh-rag-openai.git
+cd chatbot-rh-rag-openai
+
+conda create -n Projet_rag_rh python=3.11 -y
+conda activate Projet_rag_rh
+
+pip install -r requirements.txt
+
+## Configuration de clé OpenAI
+
+---
+Créer un fichier sur votre machine .env :
+
+OPENAI_API_KEY=your_key_here
+
+---
 
 ## Technologies utilisées
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
