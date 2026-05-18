@@ -1,4 +1,4 @@
-## Technologies utilisées
+# Technologies utilisées
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/LLM-OpenAI-412991?logo=openai&logoColor=white)
 ![LangChain](https://img.shields.io/badge/Framework-LangChain-1C3C3C)
